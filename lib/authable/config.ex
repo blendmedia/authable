@@ -35,7 +35,19 @@ defmodule Authable.Config do
   def renderer,
     do: Application.get_env(:authable, :renderer)
 
-  def app_authorization do
-    Application.get_env(:authable, :app_authorization, AppAuthorization)
-  end
+  def app_authorization,
+    do: Application.get_env(:authable, :app_authorization, AppAuthorization)
+
+  def token_store,
+    do: Application.get_env(:authable, :token_store)
+
+  def client,
+    do: Application.get_env(:authable, :client)
+
+  def app,
+    do: Application.get_env(:authable, :app)
+
+  def resource_owner,
+    do: Application.get_env(:authable, :resource_owner)
+
 end
